@@ -1,1 +1,13 @@
-
+name: Use Secrets
+on: [workflow_dispatch]
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use secret
+        run: |
+          echo "Username is ${{ secrets.mookee }}"
+          echo "Password length is ${#DB_PASSWORD}"
+        env:
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
