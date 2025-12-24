@@ -7,5 +7,5 @@ jobs:
     steps:
       - name: Use secret
         run: |
-          echo "Username is ${{ secrets.mookee }}
+          echo "Username is ${{ secrets.mookee }}"
     
